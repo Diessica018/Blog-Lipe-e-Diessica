@@ -66,3 +66,134 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.home{
+width: 35px;
+
+}
+.perfil{
+  width: 35px;
+}
+.favorito{
+  width: 35px;
+}
+.mais{
+  width: 35px;
+}
+.sininho{
+  width: 35px;
+  
+}
+.container {
+ 
+  border-radius: 50%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  left: 20px;
+
+}
+.sidebar {
+ width: 350px;
+  height: 35px;
+  border-radius: 20px;
+  background-color: #5aa5e7;
+  border: 1px solid #213547;
+  padding: 0 15px;
+  color: white;
+  outline: none;         
+}
+
+.header {
+  text-align: start;
+  width: 100%;
+  height: 70px;
+  color:white;
+  background-color:#213547 ;
+  position: fixed;
+  top: 60px;              
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  top:0;
+  
+}
+
+.sidebar::placeholder{
+  color: white;
+  opacity: 0.6
+}
+.botao{
+  color:white;
+ background-color: #213547;
+}
+
+.person{
+  display: flex;
+  flex-direction: column;
+
+}
+.person {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 12px;
+
+  z-index: 1000;
+}
+.btn-icone{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
+.main{
+  width: 60vh;
+  height: 40vh;
+  background-color:#213547;
+  border-radius: 25px;
+  display: flex;
+  position: absolute;
+  left: 220px;
+  top: 322px;
+  margin-top: -230px;
+  
+}
+
+.caixa2{
+  width: 60vh;
+  height: 40vh;
+  background-color:#213547;
+  border-radius: 25px;
+  display: flex;
+  position: absolute;
+  margin-top:250px;
+  left: 220px;
+  top: 150px;
+}
+
+.posts{
+
+  width: 80vh;
+  height: 82vh;
+  background-color:#213547;
+  border-radius: 25px;
+  display: flex;
+  position: absolute;
+  margin-top: 140px;
+  left:680px;
+  top: -50px;
+}
