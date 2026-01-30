@@ -1,59 +1,61 @@
-import { use, useState, useTransition } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import "./index.css";
 
-function Post(){
-  
-  const [title, settitle] = useState(null)
-  const [category, setcategory] = useState(null)
-  const [content, setcontetn] = useState(null)
-
-  const postInitialData = [{
-    title: '',
-    category: '',
-    content: '',
+const postInitialData = [
+  {
+    title: "",
+    category: "",
+    content: "",
   },
   {
-    title: 'Pastel',
-    category: 'comida',
-    content: 'pastel e bom demais',
-  }]
+    title: "Pastel",
+    category: "comclassNameNamea",
+    content: "pastel e bom demais",
+  },
+];
 
-  const [filterPost, setfilterPost] = useState(postInitialData)
+function Post() {
+  const [title, setTitle] = useState(null);
+  const [category, setCategory] = useState(null);
+  const [content, setContent] = useState(null);
 
-  function getData(){
+  const [filterPost, setfilterPost] = useState(postInitialData);
+
+  function getData() {
     const postUser = {
       title: title,
       category: category,
       content: content,
-    }
-  const newPost = [...postInitialData, postUser]
-  setfilterPost(newpost)
+    };
+    const newPost = [...postInitialData, postUser];
+    setfilterPost(newPost);
   }
 
-return (
+  return (
     <form onSubmit={getData}>
-      {filterPost.map((Blog) => {
+      {filterPost.map((userPost) => {
         <>
           <button type="submit">Criar Post</button>
-          <div id="post">
-            <div id="top">
-              <a id="profile">
-                <img id="pfpicture" src="../link.jpeg" alt="" />
+          <div classNameName="post">
+            <div classNameName="top">
+              <a classNameName="profile">
+                <img classNameName="pfpicture" src="../link.jpeg" alt="" />
               </a>
-              <h1 id="user">{user}</h1>
+              <h1 classNameName="user"></h1>
             </div>
-            <h1 id="title">Vaga de Emprego</h1>
-            <div id="content">
+            <h1 classNameName="title">Vaga de Emprego</h1>
+            <div classNameName="content">
               <p>
-                Recentemente eu me candidatei para uma vaga de programador
-                Junior em uma empresa chamada Cyber Genios, dizem que é muito
-                disputada, será que eu consigo entrar?
+                Recentemente eu me candclassNameNameatei para uma vaga de
+                programador Junior em uma empresa chamada Cyber Genios, dizem
+                que é muito disputada, será que eu consigo entrar?
               </p>
               <img src="" alt="" />
             </div>
-            <div id="botton">
-              <p id="date">{date}</p>
-              <button id="like">Like</button>
+            <div classNameName="botton">
+              <p classNameName="date"></p>
+              <button classNameName="like">Like</button>
             </div>
           </div>
         </>;
@@ -63,37 +65,74 @@ return (
 }
 
 function PostFake() {
-  return(
+  return (
     <>
-      <div id='post'>
-        <div id='top'>
-          <a id='profile'>F</a>
-          <h1 id='user'>Felipe Nunes</h1>
+      <div classNameName="post">
+        <div classNameName="top">
+          <a classNameName="profile">F</a>
+          <h1 classNameName="user">Felipe Nunes</h1>
         </div>
-        <div id='content'>
-          <p>Esse texto fala da imagem abaixo, muito legal né? Isso é apenas um teste!</p>
+        <div classNameName="content">
+          <p>
+            Esse texto fala da imagem abaixo, muito legal né? Isso é apenas um
+            teste!
+          </p>
           <img src="" alt="" />
         </div>
-        <div id='botton'>
-          <p id='date'>26/01/2026</p>
-          <p id='time'>05:05</p>
+        <div classNameName="botton">
+          <p classNameName="date">26/01/2026</p>
+          <p classNameName="time">05:05</p>
         </div>
-        <div id='action'>
-          <button id='like'>Like</button>
-          <button id='dislike'> Dislike</button>
+        <div classNameName="action">
+          <button classNameName="like">Like</button>
+          <button classNameName="dislike"> Dislike</button>
         </div>
-      </div>
-    </>
-  )
-}
-
-function App(){
-  return(
-    <>
-      <div className='container'>
-        <Post />
       </div>
     </>
   );
 }
-export default App
+
+function App() {
+  return (
+    <>
+    <div className="header ">
+      <input className="sidebar" type="text" placeholder="Procure seu blog favorito!"/>
+      <button className="botao">Seus Amigos</button>
+      <button className="botao">Viagens</button>
+      <button className="botao">Comidas</button>
+      <button className="botao">Vagas de Emprego</button>
+    </div>
+
+    <div className="container">
+
+      <button className="btn-icone">
+        <img className="home" src="/botao-home (1).png" alt=""/>
+      </button>
+
+      <button className="btn-icone">
+        <img className="mais" src="/mais (1).png" alt=""/>
+      </button>
+
+      <button className="btn-icone">
+        <img className="favorito" src="/favorito.png" alt=""/>
+      </button>
+    </div>
+
+    <div className="person">
+    <button>
+      <img className="perfil" src="/do-utilizador.png" alt=""/>
+    </button>
+
+    <button>
+      <img className="sininho" src="/notificacao.png" alt=""/>
+    </button>
+  </div>
+
+    <div>
+      <Post />
+    </div>
+      
+    </>
+  );
+}
+export default App;
