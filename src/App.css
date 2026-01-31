@@ -53,7 +53,7 @@
 
 .top{
   display: flex;
-  background-color: purple;
+  background-color: #5aa5e7;
   height: 80px;
   border-radius: 16px;
 }
@@ -98,6 +98,10 @@
 .addPost{
   display: flex;
   height: 100px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 155px;
+  margin-top: 100px;
 }
 
 .modal{
@@ -117,13 +121,14 @@
   margin-top: 20px;
   margin-left: 20px;
   height: 30px;
-  width: 120px;
+  width: 200px;
+  border-radius: 16px;
 }
 .question2{
   margin-left: 20px;
   margin-top: 30px;
   height: 200px;
-  width: 150px;
+  width: 250px;
   ::placeholder{
     display: flex;
   }
