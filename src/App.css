@@ -1,42 +1,130 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.post{
+  color: black;
+  width: 450px;
+  height: 330px;
+  border-radius: 30px;
+  margin-top: 50px;
+  margin-left: 47px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.title{
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  color: white;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.content{
+  font-size: 11px;
+  margin-top: 1px;
+  display: flex;
+  color: white;
+}
+
+.profile{
+  background-color: purple;
+  color: white;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.user{
+  font-size: 20px;
+  margin-top: 12px;
+  margin-left: 10px;
+  color: white;
+}
+
+.title{
+  justify-self: start;
+  font-size: 20px;
+  margin-top: 12px;
+  margin-left: 10px;
+}
+
+.top{
+  display: flex;
+  background-color: purple;
+  height: 80px;
+  border-radius: 16px;
+}
+
+.botton{
+  height: 60px;
+  margin-top: 120px;
+
+}
+
+.content{
+  display: flex;
+  font-size: 18px;
+  height: 30px;
+  width: 440px;
+  margin-left: 10px;
+}
+
+.like{
+  display: flex;
+  width: 10px;
+  justify-content: center;
+  margin-left: 390px;
+  border-radius: 30px;
+  background-color: purple;
+}
+
+.pfpicture{
+  width: 60px;
+  height: 60px;
+}
+
+.title{
+  font-size: 18px;
+}
+
+.mainTitle{
+  font-size: 34px;
+  margin-left: 230px;
+}
+
+.addPost{
+  display: flex;
+  height: 100px;
+}
+
+.modal{
+  width: 400px;
+  height: 400px;
+  background-color: darkgrey;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  margin-left: 300px;
+  margin-top: 100px;
+  border-radius: 30px;
+}
+
+.question1{
+  margin-top: 20px;
+  margin-left: 20px;
+  height: 30px;
+  width: 120px;
+}
+.question2{
+  margin-left: 20px;
+  margin-top: 30px;
+  height: 200px;
+  width: 150px;
+  ::placeholder{
+    display: flex;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

@@ -165,12 +165,10 @@ width: 35px;
   height: 40vh;
   background-color:#213547;
   border-radius: 25px;
-  display: flex;
   position: absolute;
   left: 220px;
   top: 322px;
   margin-top: -230px;
-  
 }
 
 .caixa2{
@@ -180,20 +178,18 @@ width: 35px;
   border-radius: 25px;
   display: flex;
   position: absolute;
-  margin-top:250px;
+  margin-top:290px;
   left: 220px;
   top: 150px;
 }
 
-.posts{
-
-  width: 80vh;
-  height: 82vh;
+.feed{
+  width: 550px;
+  height: 1680px;
   background-color:#213547;
   border-radius: 25px;
-  display: flex;
   position: absolute;
   margin-top: 140px;
-  left:680px;
+  left: 780px;
   top: -50px;
 }

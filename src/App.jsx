@@ -5,90 +5,87 @@ import "./index.css";
 const postInitialData = [
   {
     title: "",
-    category: "",
     content: "",
   },
   {
     title: "Pastel",
-    category: "comclassNameNamea",
-    content: "pastel e bom demais",
-  },
+    content: "Pastel é bom demais",
+  }
 ];
 
 function Post() {
   const [title, setTitle] = useState(null);
   const [category, setCategory] = useState(null);
   const [content, setContent] = useState(null);
+  const [user, setuser] = useState("Lipe N");
+  const [isModalOn, setIsModalOn] = useState(false);
 
   const [filterPost, setfilterPost] = useState(postInitialData);
 
   function getData() {
     const postUser = {
       title: title,
-      category: category,
       content: content,
     };
-    const newPost = [...postInitialData, postUser];
+    
+    turnModalOff()
+
+    const newPost = [postUser, ...postInitialData];
     setfilterPost(newPost);
+  }
+  function turnModalOn(){
+      setIsModalOn(true)
+    }
+  function turnModalOff(){
+      setIsModalOn(false)
+    }
+
+  function onChangeTitle(event){
+    setTitle(event.target.value)
+  }
+
+  function onChangeContent(event){
+    setContent(event.target.value)
   }
 
   return (
-    <form onSubmit={getData}>
-      {filterPost.map((userPost) => {
-        <>
-          <button type="submit">Criar Post</button>
-          <div classNameName="post">
-            <div classNameName="top">
-              <a classNameName="profile">
-                <img classNameName="pfpicture" src="../link.jpeg" alt="" />
+    <>
+    <div class="main">
+      <button className="addPost" onClick={turnModalOn}>ADICIONAR POST</button>
+        {isModalOn && (<div className="modal">
+              <input onChange={onChangeTitle} className="question1" type="text" placeholder="Digite o título do Post..." />
+              <br />
+              <textarea onChange={onChangeContent} className="question2" type="text" placeholder="Digite o Conteúdo do Post..." />
+              <button onClick={getData}>Criar Post</button>
+            </div>)}
+    </div>
+    <div className="feed">
+      <h1 className="mainTitle">Posts</h1>
+      {filterPost.map((postData)=>{
+        return(
+          <>
+            <div className="post">
+            <div className="top">
+              <a className="profile">
+                <img className="pfpicture" src="../link.jpeg" alt="" />
               </a>
-              <h1 classNameName="user"></h1>
+              <h1 className="user">Lipe N</h1>
             </div>
-            <h1 classNameName="title">Vaga de Emprego</h1>
-            <div classNameName="content">
+            <h1 className="title">{postData.title}</h1>
+            <div className="content">
               <p>
-                Recentemente eu me candclassNameNameatei para uma vaga de
-                programador Junior em uma empresa chamada Cyber Genios, dizem
-                que é muito disputada, será que eu consigo entrar?
+                {postData.content}
               </p>
               <img src="" alt="" />
             </div>
-            <div classNameName="botton">
-              <p classNameName="date"></p>
-              <button classNameName="like">Like</button>
+            <div className="botton">
+              <p className="date"></p>
             </div>
           </div>
-        </>;
-      })}
-    </form>
-  );
-}
-
-function PostFake() {
-  return (
-    <>
-      <div classNameName="post">
-        <div classNameName="top">
-          <a classNameName="profile">F</a>
-          <h1 classNameName="user">Felipe Nunes</h1>
-        </div>
-        <div classNameName="content">
-          <p>
-            Esse texto fala da imagem abaixo, muito legal né? Isso é apenas um
-            teste!
-          </p>
-          <img src="" alt="" />
-        </div>
-        <div classNameName="botton">
-          <p classNameName="date">26/01/2026</p>
-          <p classNameName="time">05:05</p>
-        </div>
-        <div classNameName="action">
-          <button classNameName="like">Like</button>
-          <button classNameName="dislike"> Dislike</button>
-        </div>
-      </div>
-    </>
+        </>
+      )})}
+  </div>   
+  </>
   );
 }
 
@@ -96,10 +93,10 @@ function App() {
   return (
     <>
     <div className="header ">
-      <input className="sidebar" type="text" placeholder="Procure seu blog favorito!"/>
+      <input className="sclassNameebar" type="text" placeholder="Procure seu blog favorito!"/>
       <button className="botao">Seus Amigos</button>
       <button className="botao">Viagens</button>
-      <button className="botao">Comidas</button>
+      <button className="botao">ComclassNameas</button>
       <button className="botao">Vagas de Emprego</button>
     </div>
 
@@ -127,7 +124,15 @@ function App() {
       <img className="sininho" src="/notificacao.png" alt=""/>
     </button>
   </div>
-
+  <div class="main">
+  <p>Novo post</p>
+  </div>
+  <div class="caixa2">
+    <p>Who to follow</p>
+  </div>
+  <div className="feed">
+    <h1 className="mainTitle">Posts</h1>
+  </div>
     <div>
       <Post />
     </div>
